@@ -1,20 +1,6 @@
 export default function AboutSection() {
   return (
     <section id="about" style={{ background: '#F5F0E8', padding: '80px 40px', position: 'relative', overflow: 'hidden' }}>
-      {/* Botanical red right side fallback */}
-      <div style={{
-        position: 'absolute', top: 32, right: 0, width: 160,
-        pointerEvents: 'none', zIndex: 0, opacity: 0.5,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-      }}>
-        <div style={{
-          width: 160, height: 200,
-          border: '1.5px dashed #c06050', borderRadius: 8,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 64, color: '#c06050',
-        }}>❀</div>
-      </div>
-
       <p className="section-label" style={{ marginBottom: 40, position: 'relative', zIndex: 1 }}>
         // ABOUT ME
       </p>
@@ -51,14 +37,28 @@ export default function AboutSection() {
         </div>
 
         {/* Right — Photo */}
-        <div style={{ flexShrink: 0, position: 'relative' }}>
+        <div style={{ position: 'relative', flexShrink: 0, marginLeft: 'auto', paddingRight: 10 }}>
+          <img
+            src="/botanical-red.png"
+            alt=""
+            style={{
+              position: 'absolute',
+              top: -20,
+              right: -20,
+              width: 180,
+              zIndex: 0,
+              pointerEvents: 'none',
+              opacity: 0.95,
+            }}
+          />
           <div style={{
             width: 260, height: 260, borderRadius: 40, background: '#E8E0D0',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: 48, color: '#9C8B6E',
+            position: 'relative', zIndex: 1,
           }}>
             <img src="/avatar.jpg" alt="Ayush Somwanshi"
-              style={{ width: 260, height: 260, objectFit: 'cover', borderRadius: 40, display: 'block' }}
+              style={{ width: 260, height: 260, objectFit: 'cover', borderRadius: 40, display: 'block', position: 'relative', zIndex: 1 }}
               onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
@@ -90,9 +90,9 @@ export default function AboutSection() {
       {/* Photos row */}
       <div style={{ marginTop: 40, display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 12, position: 'relative', zIndex: 1 }}>
         {['/photo-1.jpg', '/photo-2.jpg', '/photo-3.jpg', '/photo-4.jpg'].map((src, i) => (
-          <div key={i} style={{ height: 140, borderRadius: 8, overflow: 'hidden', background: '#E8E0D0' }}>
+          <div key={i} style={{ borderRadius: 8, overflow: 'hidden', background: '#E8E0D0' }}>
             <img src={src} alt={`Photo ${i + 1}`}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'unset' }}
               onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
             />
           </div>

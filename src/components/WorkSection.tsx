@@ -12,14 +12,14 @@ const projects = [
     title: 'FitForward',
     description: 'Helping older adolescent males improve body health and style',
     tags: ['Figma', 'E-commerce', 'Responsive'],
-    href: 'https://www.behance.net/ayushsomwanshi',
+    href: 'https://www.behance.net/gallery/236555995/Fitforward-UX-case-study',
     image: '/fitforward.png',
   },
   {
     title: 'Mysoul App',
     description: 'Mental health app',
     tags: ['Figma', 'HealthTech', 'App'],
-    href: 'https://www.behance.net/ayushsomwanshi',
+    href: 'https://www.behance.net/gallery/237103733/Short-design-process-Mysoul-app',
     image: '/mysoul.png',
   },
 ];

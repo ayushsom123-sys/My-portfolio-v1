@@ -3,20 +3,6 @@ import BlisterPack from './BlisterPack';
 export default function HeroSection() {
   return (
     <section id="hero" style={{ background: '#F5F0E8', minHeight: 812, position: 'relative', overflow: 'hidden' }}>
-      {/* Botanical top-right fallback */}
-      <div style={{
-        position: 'absolute', top: 0, right: 0, width: 112,
-        opacity: 0.8, pointerEvents: 'none',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-      }}>
-        <div style={{
-          width: 112, height: 128,
-          border: '1.5px dashed #9C8B6E', borderRadius: 8,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 48, color: '#9C8B6E', opacity: 0.5,
-        }}>✿</div>
-      </div>
-
       {/* Content */}
       <div style={{ maxWidth: 560, margin: '0 auto', paddingTop: 80, paddingBottom: 64, paddingLeft: 16, paddingRight: 16 }}>
         <p className="section-label" style={{ marginBottom: 20 }}>
@@ -27,8 +13,22 @@ export default function HeroSection() {
         <div className="rx-lines" style={{
           background: '#1C1612',
           border: '0.8px solid rgba(200,150,32,0.18)',
-          borderRadius: 14, padding: 22, marginBottom: 8, overflow: 'hidden',
+          borderRadius: 14, padding: 22, marginBottom: 8, overflow: 'visible', position: 'relative',
         }}>
+          <img
+            src="/botanical-top.png"
+            alt=""
+            style={{
+              position: 'absolute',
+              top: -100,
+              right: -14,
+              width: 92,
+              zIndex: 10,
+              pointerEvents: 'none',
+              opacity: 0.95,
+            }}
+          />
+
           {/* Top row */}
           <div style={{
             display: 'flex', justifyContent: 'space-between',

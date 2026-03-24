@@ -43,7 +43,7 @@ export default function AboutSection() {
             alt=""
             style={{
               position: 'absolute',
-              top: -20,
+              top: -72,
               right: -20,
               width: 180,
               zIndex: 0,

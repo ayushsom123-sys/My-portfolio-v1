@@ -15,7 +15,7 @@ export default function Footer() {
 
       {/* Nav links */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: 32, marginBottom: 16 }}>
-        {[['WORK', '#work'], ['ABOUT', '#about'], ['RESUME', '/resume.pdf']].map(([label, href]) => (
+        {[['WORK', '#work'], ['ABOUT', '#about'], ['RESUME', 'https://drive.google.com/file/d/1fhWi5B_ZcUODWnDn_jTUvqqhfj_Rj2nR/view?usp=sharing']].map(([label, href]) => (
           <a key={label} href={href}
             target={label === 'RESUME' ? '_blank' : undefined}
             rel={label === 'RESUME' ? 'noopener noreferrer' : undefined}

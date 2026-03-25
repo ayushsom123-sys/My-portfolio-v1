@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
-    <footer style={{
+    <footer className="footer-wrap" style={{
       background: '#1C1612',
       borderTop: '0.5px solid rgba(200,150,32,0.20)',
       padding: '60px 80px 40px',
     }}>
-      <h2 style={{
+      <h2 className="footer-heading" style={{
         fontFamily: "'DM Serif Display'", fontSize: 42,
         color: '#EDE8DF', textAlign: 'center',
         margin: '0 0 32px',
@@ -14,7 +14,7 @@ export default function Footer() {
       </h2>
 
       {/* Nav links */}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: 32, marginBottom: 16 }}>
+      <div className="footer-nav-links" style={{ display: 'flex', justifyContent: 'center', gap: 32, marginBottom: 16 }}>
         {[['WORK', '#work'], ['ABOUT', '#about'], ['RESUME', 'https://drive.google.com/file/d/1fhWi5B_ZcUODWnDn_jTUvqqhfj_Rj2nR/view?usp=sharing']].map(([label, href]) => (
           <a key={label} href={href}
             target={label === 'RESUME' ? '_blank' : undefined}
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom row */}
-      <div style={{
+      <div className="footer-bottom-row" style={{
         display: 'flex', justifyContent: 'space-between',
         marginTop: 40, paddingTop: 20,
         borderTop: '0.5px solid rgba(200,150,32,0.10)',

@@ -16,7 +16,8 @@ export default function BlisterPack() {
   const toggle = (i: number) =>
     setFlipped(prev => {
       const n = new Set(prev);
-      n.has(i) ? n.delete(i) : n.add(i);
+      if (n.has(i)) n.delete(i);
+      else n.add(i);
       return n;
     });
   const allDone = flipped.size === 8;
@@ -38,11 +39,11 @@ export default function BlisterPack() {
       </div>
 
       {/* Pill Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8 }}>
+      <div className="pill-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8 }}>
         {skills.map((s, i) => (
           <div
             key={i}
-            className={flipped.has(i) ? 'flipped' : ''}
+            className={`${flipped.has(i) ? 'flipped' : ''} pill-cell`.trim()}
             style={{ height: 96, perspective: 600, cursor: 'pointer', position: 'relative' }}
             onClick={() => toggle(i)}
           >

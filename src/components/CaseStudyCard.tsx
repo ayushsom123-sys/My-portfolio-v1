@@ -55,8 +55,8 @@ export default function CaseStudyCard({ title, description, tags, href, image }:
         </div>
 
         {/* Content */}
-        <div style={{ padding: '20px 24px 24px' }}>
-          <div style={{
+        <div className="case-study-card-content" style={{ padding: '20px 24px 24px' }}>
+          <div className="case-study-header" style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-start',
@@ -68,10 +68,10 @@ export default function CaseStudyCard({ title, description, tags, href, image }:
               fontSize: 20,
               color: '#2C1F0E',
               margin: 0,
-            }}>
+            }} className="case-study-title">
               {title}
             </h3>
-            <div style={{
+            <div className="case-study-tags" style={{
               display: 'flex',
               gap: 8,
               flexWrap: 'wrap',

@@ -26,7 +26,7 @@ const projects = [
 
 export default function WorkSection() {
   return (
-    <section id="work" style={{ background: '#F5F0E8', padding: '80px 40px' }}>
+    <section id="work" className="work-section" style={{ background: '#F5F0E8', padding: '80px 40px' }}>
       <p className="section-label" style={{ textAlign: 'center', marginBottom: 32 }}>
         // SELECTED WORK
       </p>

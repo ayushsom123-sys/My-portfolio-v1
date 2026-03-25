@@ -61,3 +61,88 @@ body { background: #F5F0E8; color: #2C1F0E; font-family: 'DM Sans', sans-serif; 
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(6px)}
 }
+
+@media (max-width: 767px) {
+  .nav-center { display: none !important; }
+  .nav-right { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+  .nav-dropdown { display: flex !important; }
+
+  .navbar-root { height: auto !important; flex-wrap: wrap !important; }
+
+  /* Navbar dropdown */
+  .nav-dropdown {
+    flex-direction: column;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
+    flex-basis: 100%;
+    background: #F5F0E8;
+    padding: 16px;
+    border-bottom: 0.5px solid rgba(200,150,32,0.18);
+  }
+  .nav-dropdown-link {
+    display: block;
+    padding: 12px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #2C1F0E;
+    text-decoration: none;
+    border-bottom: 0.5px solid rgba(200,150,32,0.18);
+    cursor: pointer;
+  }
+  .nav-dropdown-link:last-child {
+    border-bottom: none;
+  }
+
+  /* Hero section */
+  .hero-content { padding-left: 16px !important; padding-right: 16px !important; }
+  .botanical-top {
+    width: 70px !important;
+    top: 8px !important;
+    right: 8px !important;
+  }
+  .rx-top-row { flex-direction: column !important; gap: 8px !important; }
+  .rx-clinic-text { text-align: left !important; font-size: 9px !important; }
+  .rx-footer-row { flex-direction: column !important; gap: 4px !important; }
+  .pill-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .pill-cell { height: 110px !important; }
+
+  /* Work section */
+  .work-section { padding: 60px 16px !important; }
+  .case-study-card-content { padding: 16px !important; }
+  .case-study-title { font-size: 17px !important; }
+  .case-study-tags { flex-wrap: wrap; justify-content: flex-start !important; margin-top: 8px !important; }
+  .case-study-header { flex-direction: column !important; align-items: flex-start !important; }
+
+  /* About section */
+  .about-section { padding: 60px 16px !important; }
+  .about-two-col { flex-direction: column !important; gap: 32px !important; }
+  .about-left-col { max-width: 100% !important; }
+  .about-right-col { align-self: center !important; margin-left: 0 !important; padding-right: 0 !important; }
+  .avatar-img { width: 200px !important; height: 200px !important; }
+  .botanical-red { width: 130px !important; }
+  .about-heading { font-size: 32px !important; }
+  .art-grid { gap: 8px !important; }
+  .art-caption { font-size: 9px !important; }
+  .photos-row { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Footer */
+  .footer-wrap { padding: 48px 24px 32px !important; }
+  .footer-heading { font-size: 28px !important; margin-bottom: 24px !important; }
+  .footer-nav-links { gap: 20px !important; flex-wrap: wrap; justify-content: center !important; }
+  .footer-bottom-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-align: center !important;
+  }
+
+  /* Typography */
+  .section-label { font-size: 10px !important; letter-spacing: 0.08em !important; }
+}
+
+@media (min-width: 768px) {
+  .nav-hamburger { display: none; }
+  .nav-dropdown { display: none !important; }
+}

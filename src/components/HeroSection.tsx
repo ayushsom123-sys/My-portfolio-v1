@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section id="hero" style={{ background: '#F5F0E8', minHeight: 812, position: 'relative', overflow: 'hidden' }}>
       {/* Content */}
-      <div style={{ maxWidth: 560, margin: '0 auto', paddingTop: 80, paddingBottom: 64, paddingLeft: 16, paddingRight: 16 }}>
+      <div className="hero-content" style={{ maxWidth: 560, margin: '0 auto', paddingTop: 80, paddingBottom: 64, paddingLeft: 16, paddingRight: 16 }}>
         <p className="section-label" style={{ marginBottom: 20 }}>
           // A BIT ABOUT ME
         </p>
@@ -18,6 +18,7 @@ export default function HeroSection() {
           <img
             src="/botanical-top.png"
             alt=""
+            className="botanical-top"
             style={{
               position: 'absolute',
               top: -100,
@@ -30,13 +31,13 @@ export default function HeroSection() {
           />
 
           {/* Top row */}
-          <div style={{
+          <div className="rx-top-row" style={{
             display: 'flex', justifyContent: 'space-between',
             alignItems: 'flex-start', paddingBottom: 12, marginBottom: 12,
             borderBottom: '0.5px solid rgba(200,150,32,0.18)',
           }}>
             <span style={{ fontFamily: "'DM Serif Display'", fontSize: 48, lineHeight: 1, color: '#EDE8DF' }}>℞</span>
-            <div style={{
+            <div className="rx-clinic-text" style={{
               textAlign: 'right', fontFamily: "'IBM Plex Mono'",
               fontSize: 10.5, color: '#B8A890', lineHeight: 1.8,
             }}>
@@ -66,7 +67,7 @@ export default function HeroSection() {
           ))}
 
           {/* Footer row */}
-          <div style={{
+          <div className="rx-footer-row" style={{
             display: 'flex', justifyContent: 'space-between',
             paddingTop: 12, marginTop: 12,
             borderTop: '0.5px dashed rgba(200,150,32,0.25)',

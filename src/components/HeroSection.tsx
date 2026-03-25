@@ -42,7 +42,7 @@ export default function HeroSection() {
               fontSize: 10.5, color: '#B8A890', lineHeight: 1.8,
             }}>
               Ayush Somwanshi · Pharmacist → Product Designer<br />
-              Pune, Maharashtra · Lic. No. UI/UX-2025-001
+              Pune, Maharashtra · Licence No. UI/UX-2026-001
             </div>
           </div>
 
@@ -73,7 +73,7 @@ export default function HeroSection() {
             borderTop: '0.5px dashed rgba(200,150,32,0.25)',
             fontFamily: "'IBM Plex Mono'", fontSize: 9.5, color: '#8B7355',
           }}>
-            <span>DATE: MARCH 2025</span>
+            <span>DATE: MARCH 2026</span>
             <span>REFILLS: ∞</span>
             <span>POP EACH PILL TO READ DOSAGE</span>
           </div>
